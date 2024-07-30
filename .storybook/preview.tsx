@@ -1,8 +1,17 @@
+import { type Preview } from '@storybook/react'
+import { NextIntlClientProvider } from 'next-intl'
+import React from 'react'
+
 import '../src/app/global.css'
 
-import { type Preview } from '@storybook/react'
-
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <NextIntlClientProvider locale="en">
+        <Story />
+      </NextIntlClientProvider>
+    ),
+  ],
   parameters: {
     viewport: {
       viewports: {
