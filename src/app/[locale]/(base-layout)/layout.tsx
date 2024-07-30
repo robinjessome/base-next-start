@@ -34,13 +34,13 @@ export default async function RootLayout({
 	// localized strings
 	const messages = await getMessages()
 
-	return (
-		<html lang={locale}>
-			<body className={clsx('bg-blue-100', inter.className)}>
-				<NextIntlClientProvider messages={messages}>
-					<Layout>{children}</Layout>
-				</NextIntlClientProvider>
-			</body>
-		</html>
-	)
+  return (
+    <html lang={locale}>
+      <body className={clsx('bg-blue-50 text-blue-950 antialiased', inter.className)}>
+        <NextIntlClientProvider messages={messages}>
+          <Layout>{children}</Layout>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  )
 }
