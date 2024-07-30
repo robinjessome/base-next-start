@@ -2,7 +2,7 @@
 
 # DPS Starter kit
 
-Next.js & Dato CMS starter kit for Dog and Pony Studios
+Next.js starter kit for Dog and Pony Studios.
 
 ---
 
