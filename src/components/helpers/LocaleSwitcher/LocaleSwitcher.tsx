@@ -1,8 +1,8 @@
-import { locales } from '@/config/i18n'
-import { useLocale } from 'next-intl'
 import clsx from 'clsx'
 
 import Link from 'next/link'
+import { useLocale } from 'next-intl'
+import { locales } from '#/config/i18n'
 
 export default function LocaleSwitcher() {
   const locale = useLocale()

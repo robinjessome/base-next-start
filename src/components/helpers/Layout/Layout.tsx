@@ -1,4 +1,4 @@
-import { SiteFooter, SiteHeader } from '@/components/sections'
+import { SiteFooter, SiteHeader } from '#/components/sections'
 
 export type LayoutProps = {
   children: React.ReactNode
