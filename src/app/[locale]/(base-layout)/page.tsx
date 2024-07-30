@@ -5,5 +5,5 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   unstable_setRequestLocale(locale)
   const t = useTranslations('HomePage')
 
-  return <h1>{t('title')}</h1>
+  return <h1 className="text-3xl font-bold">{t('title')}</h1>
 }

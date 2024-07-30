@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
+import clsx from 'clsx'
 
 import { Layout } from '@/components/helpers'
 import { locales } from '@/config/i18n'
@@ -35,7 +36,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className={clsx('bg-blue-100', inter.className)}>
         <NextIntlClientProvider messages={messages}>
           <Layout>{children}</Layout>
         </NextIntlClientProvider>

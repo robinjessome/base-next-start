@@ -8,10 +8,10 @@ export default function LocaleSwitcher() {
   const locale = useLocale()
 
   return (
-    <ul className="">
+    <ul className="flex gap-2">
       {locales.map((loc) => (
         <li key={loc}>
-          <Link className={clsx('', locale === loc && 'font-bold text-blue-800')} href={`/${loc}`}>
+          <Link className={clsx(locale === loc && 'font-bold text-blue-800')} href={`/${loc}`}>
             {loc.toUpperCase()}
           </Link>
         </li>
