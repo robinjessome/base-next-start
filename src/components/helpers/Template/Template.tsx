@@ -1,9 +1,9 @@
 type Props = {
-  text?: string
+	text?: string
 }
 
 export default function Template({ text }: Props) {
-  if (!text) return null
+	if (!text) return null
 
-  return <div className="">{text}</div>
+	return <div className="">{text}</div>
 }

@@ -12,35 +12,35 @@ import { locales } from '#/config/i18n'
 const inter = Inter({ subsets: ['latin'] })
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }))
+	return locales.map((locale) => ({ locale }))
 }
 
 export const metadata: Metadata = {
-  title: 'DPS Starter Kit',
-  description: 'Next.js and Dato CMS starter kit for Dog and Pony Studios',
+	title: 'DPS Starter Kit',
+	description: 'Next.js and Dato CMS starter kit for Dog and Pony Studios',
 }
 
 export default async function RootLayout({
-  children,
-  params: { locale },
+	children,
+	params: { locale },
 }: {
-  children: React.ReactNode
-  params: { locale: string }
+	children: React.ReactNode
+	params: { locale: string }
 }) {
-  /*
+	/*
   Usage of next-intl APIs in Server Components currently opts into dynamic rendering. This limitation will eventually be lifted, but as a stopgap solution, we can use the `unstable_setRequestLocale` API to enable static rendering, see https://next-intl-docs.vercel.app/docs/getting-started/app-router/with-i18n-routing#static-rendering
   */
-  unstable_setRequestLocale(locale)
-  // localized strings
-  const messages = await getMessages()
+	unstable_setRequestLocale(locale)
+	// localized strings
+	const messages = await getMessages()
 
-  return (
-    <html lang={locale}>
-      <body className={clsx('bg-blue-100', inter.className)}>
-        <NextIntlClientProvider messages={messages}>
-          <Layout>{children}</Layout>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  )
+	return (
+		<html lang={locale}>
+			<body className={clsx('bg-blue-100', inter.className)}>
+				<NextIntlClientProvider messages={messages}>
+					<Layout>{children}</Layout>
+				</NextIntlClientProvider>
+			</body>
+		</html>
+	)
 }

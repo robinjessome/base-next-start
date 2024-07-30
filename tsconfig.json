@@ -1,52 +1,44 @@
 {
-  "compilerOptions": {
-    /* Base Options */
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "es2022",
-    "verbatimModuleSyntax": true,
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "incremental": true,
-    /* Custom Options */
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "#/*": [
-        "./src/*"
-      ]
-    },
-    /* Strictness */
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "isolatedModules": false,
-    /* Transpilation */
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
-    "noEmit": true,
-    /* Dom Options */
-    "lib": [
-      "es2022",
-      "dom",
-      "dom.iterable"
-    ],
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"compilerOptions": {
+		/* Base Options */
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2022",
+		"verbatimModuleSyntax": true,
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"incremental": true,
+		/* Custom Options */
+		"typeRoots": ["./node_modules/@types", "./src/@types"],
+		"baseUrl": ".",
+		"paths": {
+			"#/*": ["./src/*"]
+		},
+		/* Strictness */
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"isolatedModules": false,
+		/* Transpilation */
+		"moduleResolution": "Bundler",
+		"module": "ESNext",
+		"noEmit": true,
+		/* Dom Options */
+		"lib": ["es2022", "dom", "dom.iterable"],
+		"jsx": "preserve",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
+	},
+	"include": [
+		"next-env.d.ts",
+		".next/types/**/*.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".storybook/**/*.ts",
+		".storybook/**/*.tsx"
+	],
+	"exclude": ["node_modules"]
 }

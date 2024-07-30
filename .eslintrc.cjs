@@ -17,17 +17,17 @@ module.exports = {
 	},
 	plugins: ['simple-import-sort'],
 	extends: [
-    'eslint:recommended',
-    'plugin:import/warnings',
-    'plugin:tailwindcss/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:react/recommended',
-    'plugin:storybook/recommended',
-    'plugin:@next/next/recommended',
-    'next/core-web-vitals',
-    'prettier',
-  ],
+		'eslint:recommended',
+		'plugin:import/warnings',
+		'plugin:tailwindcss/recommended',
+		'plugin:jsx-a11y/recommended',
+		'plugin:react-hooks/recommended',
+		'plugin:react/recommended',
+		'plugin:storybook/recommended',
+		'plugin:@next/next/recommended',
+		'next/core-web-vitals',
+		'prettier',
+	],
 	rules: {
 		'no-empty-pattern': 'off',
 		'no-console': WARN,
@@ -40,26 +40,19 @@ module.exports = {
 			{
 				alphabetize: { order: 'asc', caseInsensitive: true },
 				pathGroups: [{ pattern: '#/**', group: 'internal' }],
-				groups: [
-					'builtin',
-					'external',
-					'internal',
-					'parent',
-					'sibling',
-					'index',
-				],
+				groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
 			},
 		],
 	},
 	overrides: [
 		{
 			// TS and TSX Files
-			extends: [
-				'next/core-web-vitals',
-				'plugin:@typescript-eslint/recommended',
-			],
+			extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
 			files: ['*.ts?(x)'],
 			parser: '@typescript-eslint/parser',
+			parserOptions: {
+				project: './tsconfig.json',
+			},
 			plugins: ['@typescript-eslint'],
 			rules: {
 				'@typescript-eslint/consistent-type-imports': [
@@ -79,6 +72,8 @@ module.exports = {
 						varsIgnorePattern: '^ignored',
 					},
 				],
+				'@typescript-eslint/no-misused-promises': [ERROR, { checksVoidReturn: false }],
+				'@typescript-eslint/no-floating-promises': ERROR,
 				'import/consistent-type-specifier-style': [WARN, 'prefer-inline'],
 			},
 		},
@@ -104,7 +99,7 @@ module.exports = {
 		{
 			// Storybook Files
 			files: storybookFiles,
-      extends: ['plugin:storybook/recommended'],
+			extends: ['plugin:storybook/recommended'],
 			rules: {
 				'import/no-anonymous-default-export': 'off',
 			},
