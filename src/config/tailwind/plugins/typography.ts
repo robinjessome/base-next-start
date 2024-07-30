@@ -4,7 +4,6 @@ interface PresetStyles {
 	'font-size': string
 	'line-height': string
 	'font-weight': number
-	'letter-spacing': string
 	bold?: number
 	mobile?: Partial<PresetStyles>
 }
@@ -14,7 +13,6 @@ const presets: Record<string, PresetStyles> = {
 		'font-size': '3rem',
 		'line-height': '3.625rem',
 		'font-weight': 400,
-		'letter-spacing': '0px',
 		bold: 700,
 		mobile: {
 			'font-size': '2.25rem',
@@ -25,7 +23,6 @@ const presets: Record<string, PresetStyles> = {
 		'font-size': '2.125rem',
 		'line-height': '2.75rem',
 		'font-weight': 400,
-		'letter-spacing': '0px',
 		bold: 700,
 		mobile: {
 			'font-size': '1.625rem',
@@ -36,7 +33,6 @@ const presets: Record<string, PresetStyles> = {
 		'font-size': '1.125rem',
 		'line-height': '1.75rem',
 		'font-weight': 400,
-		'letter-spacing': '0px',
 		bold: 700,
 	},
 }
