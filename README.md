@@ -25,5 +25,22 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and
-load Inter, a custom Google Font.
+## Localization
+
+We're using [next-intl](https://next-intl-docs.vercel.app/) for localization.
+
+Translated strings are found in JSON files in the `src/locales` directory. Has available some custom formatting for text with dynamic variables, pluralization, dates, numbers, etc.
+
+## Storybook
+
+Run Storybook:
+
+```bash
+npm run storybook
+```
+
+Will start a server on [http://localhost:6006](http://localhost:6006) to preview and test individual component.
+
+## Tailwind & CSS Styles
+
+We're using [Tailwind CSS](https://tailwindcss.com/) for styling. We have also a custom set of typography presets found in `src/config/tailwind/plugins/typography.js`.
