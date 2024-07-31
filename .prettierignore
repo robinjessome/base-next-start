@@ -1,0 +1,14 @@
+node_modules
+.editorconfig
+
+/build
+/public/build
+/server-build
+.env
+.next
+.env*
+
+possibleTypes.json
+
+package-lock.json
+yarn.lock
